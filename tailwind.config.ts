@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for Financial Center for Auditing
+				'navy': {
+					'700': '#1A1F2C',
+					'800': '#141824',
+					'900': '#0F131A',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
