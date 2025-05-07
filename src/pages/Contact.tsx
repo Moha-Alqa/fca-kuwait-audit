@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,7 +8,6 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
-import Map from "@/components/Map";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -177,16 +177,6 @@ const Contact = () => {
                   </CardContent>
                 </Card>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Map Section */}
-        <section className="bg-gray-50 py-12">
-          <div className="container mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl font-bold text-blue-900 mb-8 text-center">Our Location</h2>
-            <div className="h-96 rounded-lg shadow-md overflow-hidden">
-              <Map />
             </div>
           </div>
         </section>

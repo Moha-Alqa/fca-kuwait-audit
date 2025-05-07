@@ -32,9 +32,9 @@ const Navbar = () => {
           <a href="/#about" className="text-sm font-medium text-gray-700 hover:text-blue-900">
             About Us
           </a>
-          <Link to="/services" className="text-sm font-medium text-gray-700 hover:text-blue-900">
+          <a href="/#services" className="text-sm font-medium text-gray-700 hover:text-blue-900">
             Services
-          </Link>
+          </a>
           <a href="/#team" className="text-sm font-medium text-gray-700 hover:text-blue-900">
             Our Team
           </a>
@@ -80,13 +80,13 @@ const Navbar = () => {
             >
               About Us
             </a>
-            <Link
-              to="/services"
+            <a
+              href="/#services"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
               onClick={handleNavLinkClick}
             >
               Services
-            </Link>
+            </a>
             <a
               href="/#team"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
