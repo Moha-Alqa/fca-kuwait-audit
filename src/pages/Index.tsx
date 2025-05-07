@@ -10,6 +10,7 @@ import ServicesSection from "@/components/ServicesSection";
 import TeamSection from "@/components/TeamSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };
