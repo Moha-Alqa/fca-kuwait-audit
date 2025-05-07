@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -17,12 +18,16 @@ const Hero = () => {
           with the highest standards of integrity and professionalism in Kuwait and beyond.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg">
-            Our Services
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-6 text-lg" asChild>
+            <Link to="/services">
+              Our Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
-          <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
-            Contact Us
+          <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 px-8 py-6 text-lg" asChild>
+            <Link to="/contact">
+              Contact Us
+            </Link>
           </Button>
         </div>
       </div>
