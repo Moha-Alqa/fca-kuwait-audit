@@ -7,6 +7,11 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleNavLinkClick = () => {
+    // Close mobile menu when a link is clicked
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b shadow-sm">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto sm:px-6">
@@ -33,9 +38,9 @@ const Navbar = () => {
           <a href="/#team" className="text-sm font-medium text-gray-700 hover:text-blue-900">
             Our Team
           </a>
-          <Link to="/contact" className="text-sm font-medium text-gray-700 hover:text-blue-900">
+          <a href="/#contact" className="text-sm font-medium text-gray-700 hover:text-blue-900">
             Contact
-          </Link>
+          </a>
           <Button className="bg-amber-600 hover:bg-amber-700" asChild>
             <Link to="/contact">Get In Touch</Link>
           </Button>
@@ -64,41 +69,41 @@ const Navbar = () => {
             <Link
               to="/"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               Home
             </Link>
             <a
               href="/#about"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               About Us
             </a>
             <Link
               to="/services"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               Services
             </Link>
             <a
               href="/#team"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               Our Team
             </a>
-            <Link
-              to="/contact"
+            <a
+              href="/#contact"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               Contact
-            </Link>
+            </a>
             <div className="pt-2">
               <Button className="w-full bg-amber-600 hover:bg-amber-700" asChild>
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Get In Touch</Link>
+                <Link to="/contact" onClick={handleNavLinkClick}>Get In Touch</Link>
               </Button>
             </div>
           </div>
