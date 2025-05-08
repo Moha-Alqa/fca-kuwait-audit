@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const handleNavLinkClick = () => {
     // Close mobile menu when a link is clicked
@@ -18,8 +21,8 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <span className="text-xl font-bold text-navy-700">
-              <span className="text-blue-900">Financial Center</span>{" "}
-              <span className="text-amber-600">for Auditing</span>
+              <span className="text-blue-900">{t("navbar.financialCenter")}</span>{" "}
+              <span className="text-amber-600">{t("navbar.forAuditing")}</span>
             </span>
           </Link>
         </div>
@@ -27,27 +30,29 @@ const Navbar = () => {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           <Link to="/" className="text-sm font-medium text-gray-700 hover:text-blue-900">
-            Home
+            {t("navbar.home")}
           </Link>
           <a href="/#about" className="text-sm font-medium text-gray-700 hover:text-blue-900">
-            About Us
+            {t("navbar.aboutUs")}
           </a>
           <a href="/#services" className="text-sm font-medium text-gray-700 hover:text-blue-900">
-            Services
+            {t("navbar.services")}
           </a>
           <a href="/#team" className="text-sm font-medium text-gray-700 hover:text-blue-900">
-            Our Team
+            {t("navbar.ourTeam")}
           </a>
           <a href="/#contact" className="text-sm font-medium text-gray-700 hover:text-blue-900">
-            Contact
+            {t("navbar.contact")}
           </a>
+          <LanguageSwitcher />
           <Button className="bg-amber-600 hover:bg-amber-700" asChild>
-            <Link to="/contact">Get In Touch</Link>
+            <a href="/#contact">{t("navbar.getInTouch")}</a>
           </Button>
         </nav>
 
         {/* Mobile menu button */}
-        <div className="flex md:hidden">
+        <div className="flex md:hidden items-center space-x-2">
+          <LanguageSwitcher />
           <button
             type="button"
             className="text-gray-500 hover:text-gray-700"
@@ -71,39 +76,39 @@ const Navbar = () => {
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
               onClick={handleNavLinkClick}
             >
-              Home
+              {t("navbar.home")}
             </Link>
             <a
               href="/#about"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
               onClick={handleNavLinkClick}
             >
-              About Us
+              {t("navbar.aboutUs")}
             </a>
             <a
               href="/#services"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
               onClick={handleNavLinkClick}
             >
-              Services
+              {t("navbar.services")}
             </a>
             <a
               href="/#team"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
               onClick={handleNavLinkClick}
             >
-              Our Team
+              {t("navbar.ourTeam")}
             </a>
             <a
               href="/#contact"
               className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-50"
               onClick={handleNavLinkClick}
             >
-              Contact
+              {t("navbar.contact")}
             </a>
             <div className="pt-2">
               <Button className="w-full bg-amber-600 hover:bg-amber-700" asChild>
-                <Link to="/contact" onClick={handleNavLinkClick}>Get In Touch</Link>
+                <a href="/#contact" onClick={handleNavLinkClick}>{t("navbar.getInTouch")}</a>
               </Button>
             </div>
           </div>

@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +9,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import BackToTop from "./components/BackToTop";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 const queryClient = new QueryClient();
 
@@ -83,34 +83,36 @@ const SmoothScrollManager = ({ children }: { children: React.ReactNode }) => {
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={
-            <SmoothScrollManager>
-              <Index />
-            </SmoothScrollManager>
-          } />
-          <Route path="/services" element={
-            <SmoothScrollManager>
-              <Services />
-            </SmoothScrollManager>
-          } />
-          <Route path="/contact" element={
-            <SmoothScrollManager>
-              <Contact />
-            </SmoothScrollManager>
-          } />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={
-            <SmoothScrollManager>
-              <NotFound />
-            </SmoothScrollManager>
-          } />
-        </Routes>
-        <BackToTop />
-      </BrowserRouter>
+      <LanguageProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={
+              <SmoothScrollManager>
+                <Index />
+              </SmoothScrollManager>
+            } />
+            <Route path="/services" element={
+              <SmoothScrollManager>
+                <Services />
+              </SmoothScrollManager>
+            } />
+            <Route path="/contact" element={
+              <SmoothScrollManager>
+                <Contact />
+              </SmoothScrollManager>
+            } />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={
+              <SmoothScrollManager>
+                <NotFound />
+              </SmoothScrollManager>
+            } />
+          </Routes>
+          <BackToTop />
+        </BrowserRouter>
+      </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

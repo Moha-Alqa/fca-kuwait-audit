@@ -5,15 +5,18 @@ import { Check, FileText, Users, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
-      title: "Financial Statement Audits",
+      title: t("services.financial.title"),
       icon: FileText,
-      description: "Comprehensive examination of financial statements to ensure accuracy and compliance with accounting standards.",
+      description: t("services.financial.description"),
       features: [
-        "In-depth analysis of financial records and statements",
+        t("services.financial.item1"),
         "Review for compliance with IFRS and local accounting standards",
         "Assessment of internal controls and financial reporting processes",
         "Identification and reporting of material misstatements",
@@ -21,11 +24,11 @@ const Services = () => {
       ]
     },
     {
-      title: "Internal Audits",
+      title: t("services.internal.title"),
       icon: Shield,
-      description: "Evaluation of internal controls and processes to improve operational efficiency and mitigate risk.",
+      description: t("services.internal.description"),
       features: [
-        "Thorough assessment of internal control systems",
+        t("services.internal.item1"),
         "Identification of process inefficiencies and bottlenecks",
         "Evaluation of compliance with internal policies and procedures",
         "Risk-based approach to identify critical control weaknesses",
@@ -33,11 +36,11 @@ const Services = () => {
       ]
     },
     {
-      title: "Compliance Audits",
+      title: t("services.compliance.title"),
       icon: FileText,
-      description: "Verification of adherence to laws, regulations, and internal policies to prevent legal issues.",
+      description: t("services.compliance.description"),
       features: [
-        "Comprehensive review of regulatory compliance",
+        t("services.compliance.item1"),
         "Gap analysis between current practices and regulatory requirements",
         "Assessment of compliance risk across the organization",
         "Documentation review and compliance testing",
@@ -45,11 +48,11 @@ const Services = () => {
       ]
     },
     {
-      title: "Risk Assessment & Management",
+      title: t("services.risk.title"),
       icon: Shield,
-      description: "Identification and analysis of potential risks to develop effective mitigation strategies.",
+      description: t("services.risk.description"),
       features: [
-        "Enterprise-wide risk assessment and prioritization",
+        t("services.risk.item1"),
         "Development of risk management frameworks",
         "Implementation of risk mitigation strategies",
         "Establishment of ongoing risk monitoring systems",
@@ -57,11 +60,11 @@ const Services = () => {
       ]
     },
     {
-      title: "Due Diligence",
+      title: t("services.dueDiligence.title"),
       icon: FileText,
-      description: "Thorough investigation of financial records and operations before major business decisions.",
+      description: t("services.dueDiligence.description"),
       features: [
-        "Comprehensive financial and operational analysis",
+        t("services.dueDiligence.item1"),
         "Identification of potential liabilities and risks",
         "Assessment of internal controls and compliance",
         "Evaluation of financial projections and assumptions",
@@ -69,11 +72,11 @@ const Services = () => {
       ]
     },
     {
-      title: "Specialized Industry Audits",
+      title: t("services.specialized.title"),
       icon: Users,
-      description: "Customized audit solutions for specific industries with unique regulatory requirements.",
+      description: t("services.specialized.description"),
       features: [
-        "Industry-specific compliance evaluations",
+        t("services.specialized.item1"),
         "Specialized audit procedures for regulated sectors",
         "In-depth knowledge of industry standards and best practices",
         "Customized audit approaches for different business models",
@@ -91,11 +94,10 @@ const Services = () => {
           <div className="absolute inset-0 bg-[url('https://t4.ftcdn.net/jpg/06/21/24/03/360_F_621240399_5hM5KCFFTRAZ2qB0U9tApz2SuGfEPEfZ.jpg')] bg-cover bg-center opacity-10"></div>
           <div className="relative container mx-auto px-4 py-16 sm:px-6">
             <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl mb-4">
-              Our Comprehensive Audit Services
+              {t("services.title")}
             </h1>
             <p className="mt-4 text-lg max-w-prose text-gray-200">
-              Financial Center for Auditing provides a wide range of audit and assurance services 
-              designed to meet the unique needs of businesses in Kuwait and beyond.
+              {t("services.description")}
             </p>
           </div>
         </section>
@@ -116,8 +118,8 @@ const Services = () => {
               {services.map((service, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow border-t-4 border-t-blue-900">
                   <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="bg-blue-100 p-3 rounded-full mr-4">
+                    <div className="flex items-center mb-4 rtl:flex-row-reverse rtl:text-right">
+                      <div className="bg-blue-100 p-3 rounded-full mr-4 rtl:ml-4 rtl:mr-0">
                         <service.icon className="h-6 w-6 text-blue-900" />
                       </div>
                       <h3 className="text-xl font-semibold text-blue-900">{service.title}</h3>
@@ -127,8 +129,8 @@ const Services = () => {
                       <h4 className="font-medium text-blue-900 mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start">
-                            <Check className="h-5 w-5 text-amber-600 mr-2 shrink-0 mt-0.5" />
+                          <li key={featureIndex} className="flex items-start rtl:flex-row-reverse">
+                            <Check className="h-5 w-5 text-amber-600 mr-2 rtl:ml-2 rtl:mr-0 shrink-0 mt-0.5" />
                             <span className="text-gray-700">{feature}</span>
                           </li>
                         ))}
@@ -141,7 +143,7 @@ const Services = () => {
 
             <div className="mt-12 flex justify-center">
               <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3" onClick={() => window.location.href = '/#contact'}>
-                Contact Us Today
+                {t("navbar.contact")}
               </Button>
             </div>
           </div>

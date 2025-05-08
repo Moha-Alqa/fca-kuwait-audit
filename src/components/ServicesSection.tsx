@@ -2,67 +2,70 @@
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
-      title: "Financial Statement Audits",
-      description: "Comprehensive examination of financial statements to ensure accuracy and compliance with accounting standards.",
+      title: t("services.financial.title"),
+      description: t("services.financial.description"),
       items: [
-        "In-depth analysis of financial records",
-        "Compliance with IFRS and local accounting standards",
-        "Identification of potential financial risks",
-        "Detailed audit reports with recommendations"
+        t("services.financial.item1"),
+        t("services.financial.item2"),
+        t("services.financial.item3"),
+        t("services.financial.item4")
       ]
     },
     {
-      title: "Internal Audits",
-      description: "Evaluation of internal controls and processes to improve operational efficiency and mitigate risk.",
+      title: t("services.internal.title"),
+      description: t("services.internal.description"),
       items: [
-        "Assessment of internal control systems",
-        "Identification of process inefficiencies",
-        "Recommendations for operational improvements",
-        "Risk management strategies"
+        t("services.internal.item1"),
+        t("services.internal.item2"),
+        t("services.internal.item3"),
+        t("services.internal.item4")
       ]
     },
     {
-      title: "Compliance Audits",
-      description: "Verification of adherence to laws, regulations, and internal policies to prevent legal issues.",
+      title: t("services.compliance.title"),
+      description: t("services.compliance.description"),
       items: [
-        "Review of regulatory compliance",
-        "Policy and procedure assessment",
-        "Compliance risk evaluation",
-        "Remediation planning and support"
+        t("services.compliance.item1"),
+        t("services.compliance.item2"),
+        t("services.compliance.item3"),
+        t("services.compliance.item4")
       ]
     },
     {
-      title: "Risk Assessment & Management",
-      description: "Identification and analysis of potential risks to develop effective mitigation strategies.",
+      title: t("services.risk.title"),
+      description: t("services.risk.description"),
       items: [
-        "Comprehensive risk assessments",
-        "Risk prioritization frameworks",
-        "Mitigation strategy development",
-        "Ongoing risk monitoring systems"
+        t("services.risk.item1"),
+        t("services.risk.item2"),
+        t("services.risk.item3"),
+        t("services.risk.item4")
       ]
     },
     {
-      title: "Due Diligence",
-      description: "Thorough investigation of financial records and operations before major business decisions.",
+      title: t("services.dueDiligence.title"),
+      description: t("services.dueDiligence.description"),
       items: [
-        "Detailed financial analysis",
-        "Operations and process review",
-        "Identification of potential liabilities",
-        "Investment risk assessment"
+        t("services.dueDiligence.item1"),
+        t("services.dueDiligence.item2"),
+        t("services.dueDiligence.item3"),
+        t("services.dueDiligence.item4")
       ]
     },
     {
-      title: "Specialized Audits",
-      description: "Customized audit solutions for specific industries or unique business requirements.",
+      title: t("services.specialized.title"),
+      description: t("services.specialized.description"),
       items: [
-        "Industry-specific compliance checks",
-        "Special purpose financial statements",
-        "IT systems and security audits",
-        "Fraud investigation and prevention"
+        t("services.specialized.item1"),
+        t("services.specialized.item2"),
+        t("services.specialized.item3"),
+        t("services.specialized.item4")
       ]
     }
   ];
@@ -71,11 +74,10 @@ const ServicesSection = () => {
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-blue-900 sm:text-4xl mb-4">Our Services</h2>
+          <h2 className="text-3xl font-bold text-blue-900 sm:text-4xl mb-4">{t("services.title")}</h2>
           <div className="w-20 h-1 mx-auto bg-amber-600 mb-8"></div>
           <p className="max-w-3xl mx-auto text-lg text-gray-600">
-            At Financial Center for Auditing, we offer a comprehensive range of audit and assurance services 
-            tailored to meet the specific needs of each client.
+            {t("services.description")}
           </p>
         </div>
 
@@ -92,7 +94,7 @@ const ServicesSection = () => {
                 <ul className="space-y-2">
                   {service.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-amber-600 mr-2 shrink-0 mt-0.5" />
+                      <Check className="h-5 w-5 text-amber-600 mr-2 shrink-0 mt-0.5 rtl:ml-2 rtl:mr-0" />
                       <span className="text-sm text-gray-700">{item}</span>
                     </li>
                   ))}
