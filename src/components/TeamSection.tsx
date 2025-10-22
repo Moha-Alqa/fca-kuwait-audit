@@ -53,6 +53,8 @@ const TeamSection = () => {
                   <li>• {t("team.partner2.expertise2")}</li>
                   <li>• {t("team.partner2.expertise3")}</li>
                   <li>• {t("team.partner2.expertise4")}</li>
+                  <li>• {t("team.partner2.expertise5")}</li>
+                  <li>• {t("team.partner2.expertise6")}</li>
                 </ul>
               </div>
             </CardContent>

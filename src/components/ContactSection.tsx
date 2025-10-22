@@ -43,7 +43,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-blue-900 mb-1">{t("contact.email")}</h3>
-                  <p className="text-gray-700 text-sm ltr-text">info@fcaoffice.com</p>
+                  <p className="text-gray-700 text-sm ltr-text">contact@fcauditing.com</p>
                 </div>
               </CardContent>
             </Card>
