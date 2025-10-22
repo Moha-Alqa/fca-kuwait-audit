@@ -83,36 +83,21 @@ const SmoothScrollManager = ({ children }: { children: React.ReactNode }) => {
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <LanguageProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={
-              <SmoothScrollManager>
-                <Index />
-              </SmoothScrollManager>
-            } />
-            <Route path="/services" element={
-              <SmoothScrollManager>
-                <Services />
-              </SmoothScrollManager>
-            } />
-            <Route path="/contact" element={
-              <SmoothScrollManager>
-                <Contact />
-              </SmoothScrollManager>
-            } />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={
-              <SmoothScrollManager>
-                <NotFound />
-              </SmoothScrollManager>
-            } />
-          </Routes>
+      <BrowserRouter>
+        <LanguageProvider>
+          <Toaster />
+          <Sonner />
+          <SmoothScrollManager>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </SmoothScrollManager>
           <BackToTop />
-        </BrowserRouter>
-      </LanguageProvider>
+        </LanguageProvider>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
