@@ -30,8 +30,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-blue-900 mb-1">{t("contact.phone")}</h3>
-                  <p className="text-gray-700 text-sm ltr-numbers">00965 97718883</p>
-                  <p className="text-gray-700 text-sm ltr-numbers">00965 98089540</p>
+                  <p className="text-gray-700 text-sm ltr-numbers">{t("contact.phone1")}</p>
+                  <p className="text-gray-700 text-sm ltr-numbers">{t("contact.phone2")}</p>
                 </div>
               </CardContent>
             </Card>
@@ -56,9 +56,9 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-medium text-blue-900 mb-1">{t("contact.address")}</h3>
                   <p className="text-gray-700 text-sm">
-                    Qibla - Block 14 - Abu Bakr Al Sidiq Street <br />
-                    2nd Floor - Bldg. A1 - Flr 2 - Off. 203 <br />
-                    Kuwait
+                    {t("contact.addressLine1")} <br />
+                    {t("contact.addressLine2")} <br />
+                    {t("contact.addressLine3")}
                   </p>
                 </div>
               </CardContent>
