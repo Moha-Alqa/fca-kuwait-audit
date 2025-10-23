@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import logo from "@/assets/logo.jpg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,8 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full bg-white border-b shadow-sm">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto sm:px-6">
         <div className="flex items-center">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="Financial Center Logo" className="h-10 w-10 object-contain" />
             <span className="text-xl font-bold text-navy-700">
               <span className="text-blue-900">{t("navbar.financialCenter")}</span>{" "}
               <span className="text-amber-600">{t("navbar.forAuditing")}</span>

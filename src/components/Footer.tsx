@@ -1,6 +1,7 @@
 
 import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -15,9 +16,10 @@ const Footer = () => {
               <span className="text-white">{t("navbar.financialCenter")}</span>{" "}
               <span className="text-amber-400">{t("navbar.forAuditing")}</span>
             </h3>
-            <p className="text-gray-300 text-sm pr-10 rtl:pl-10 rtl:pr-0">
+            <p className="text-gray-300 text-sm pr-10 rtl:pl-10 rtl:pr-0 mb-4">
               {t("footer.description")}
             </p>
+            <img src={logo} alt="Financial Center Logo" className="h-16 w-16 object-contain" />
           </div>
           
           <div>
