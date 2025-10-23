@@ -90,7 +90,7 @@ const Services = () => {
       <Navbar />
       <main className="flex-1">
         {/* Hero section */}
-        <section className="relative bg-blue-900 text-white">
+        <section className="relative bg-[#0A5F6E] text-white">
           <div className="absolute inset-0 bg-[url('https://t4.ftcdn.net/jpg/06/21/24/03/360_F_621240399_5hM5KCFFTRAZ2qB0U9tApz2SuGfEPEfZ.jpg')] bg-cover bg-center opacity-10"></div>
           <div className="relative container mx-auto px-4 py-16 sm:px-6">
             <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl mb-4">
@@ -106,8 +106,8 @@ const Services = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="mb-10 max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">How We Can Help Your Business</h2>
-              <p className="text-lg text-gray-700 mb-8">
+              <h2 className="text-3xl font-bold text-[#0A5F6E] mb-6 text-center">How We Can Help Your Business</h2>
+              <p className="text-lg text-[#475569] mb-8">
                 At Financial Center for Auditing, we understand that every business faces unique challenges. 
                 Our team of experienced professionals delivers customized audit and assurance services 
                 that provide the insights and confidence you need to make informed decisions.
@@ -116,22 +116,22 @@ const Services = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow border-t-4 border-t-blue-900">
+                <Card key={index} className="hover:shadow-lg transition-shadow border-t-4 border-t-[#0A5F6E]">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4 rtl:flex-row-reverse rtl:text-right">
-                      <div className="bg-blue-100 p-3 rounded-full mr-4 rtl:ml-4 rtl:mr-0">
-                        <service.icon className="h-6 w-6 text-blue-900" />
+                      <div className="bg-[#E6F3F5] p-3 rounded-full mr-4 rtl:ml-4 rtl:mr-0">
+                        <service.icon className="h-6 w-6 text-[#0A5F6E]" />
                       </div>
-                      <h3 className="text-xl font-semibold text-blue-900">{service.title}</h3>
+                      <h3 className="text-xl font-semibold text-[#0A5F6E]">{service.title}</h3>
                     </div>
-                    <p className="text-gray-700 mb-6">{service.description}</p>
+                    <p className="text-[#475569] mb-6">{service.description}</p>
                     <div className="border-t border-gray-200 pt-4">
-                      <h4 className="font-medium text-blue-900 mb-3">Key Features:</h4>
+                      <h4 className="font-medium text-[#0A5F6E] mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start rtl:flex-row-reverse">
-                            <Check className="h-5 w-5 text-amber-600 mr-2 rtl:ml-2 rtl:mr-0 shrink-0 mt-0.5" />
-                            <span className="text-gray-700">{feature}</span>
+                            <Check className="h-5 w-5 text-[#10B981] mr-2 rtl:ml-2 rtl:mr-0 shrink-0 mt-0.5" />
+                            <span className="text-[#475569]">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -142,7 +142,7 @@ const Services = () => {
             </div>
 
             <div className="mt-12 flex justify-center">
-              <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3" onClick={() => window.location.href = '/#contact'}>
+              <Button className="bg-[#D4AF37] hover:bg-[#B8962F] text-white px-6 py-3" onClick={() => window.location.href = '/#contact'}>
                 {t("navbar.contact")}
               </Button>
             </div>

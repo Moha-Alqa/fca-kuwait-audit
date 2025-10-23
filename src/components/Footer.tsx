@@ -8,13 +8,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-blue-900 text-white">
+    <footer className="bg-[#0A5F6E] text-white">
       <div className="container mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">
               <span className="text-white">{t("navbar.financialCenter")}</span>{" "}
-              <span className="text-amber-400">{t("navbar.forAuditing")}</span>
+              <span className="text-[#D4AF37]">{t("navbar.forAuditing")}</span>
             </h3>
             <p className="text-gray-300 text-sm pr-10 rtl:pl-10 rtl:pr-0 mb-4">
               {t("footer.description")}
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-blue-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-[#085160] mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">
             &copy; {currentYear} {t("navbar.financialCenter")} {t("navbar.forAuditing")}. {t("footer.rights")}
           </p>

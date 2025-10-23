@@ -23,31 +23,31 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="Financial Center Logo" className="h-10 w-10 object-contain" />
             <span className="text-xl font-bold text-navy-700">
-              <span className="text-blue-900">{t("navbar.financialCenter")}</span>{" "}
-              <span className="text-amber-600">{t("navbar.forAuditing")}</span>
+              <span className="text-[#0A5F6E]">{t("navbar.financialCenter")}</span>{" "}
+              <span className="text-[#D4AF37]">{t("navbar.forAuditing")}</span>
             </span>
           </Link>
         </div>
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-sm font-medium text-gray-700 hover:text-blue-900">
+          <Link to="/" className="text-sm font-medium text-[#475569] hover:text-[#0A5F6E]">
             {t("navbar.home")}
           </Link>
-          <a href="/#about" className="text-sm font-medium text-gray-700 hover:text-blue-900">
+          <a href="/#about" className="text-sm font-medium text-[#475569] hover:text-[#0A5F6E]">
             {t("navbar.aboutUs")}
           </a>
-          <a href="/#services" className="text-sm font-medium text-gray-700 hover:text-blue-900">
+          <a href="/#services" className="text-sm font-medium text-[#475569] hover:text-[#0A5F6E]">
             {t("navbar.services")}
           </a>
-          <a href="/#team" className="text-sm font-medium text-gray-700 hover:text-blue-900">
+          <a href="/#team" className="text-sm font-medium text-[#475569] hover:text-[#0A5F6E]">
             {t("navbar.ourTeam")}
           </a>
-          <a href="/#contact" className="text-sm font-medium text-gray-700 hover:text-blue-900">
+          <a href="/#contact" className="text-sm font-medium text-[#475569] hover:text-[#0A5F6E]">
             {t("navbar.contact")}
           </a>
           <LanguageSwitcher />
-          <Button className="bg-amber-600 hover:bg-amber-700" asChild>
+          <Button className="bg-[#D4AF37] hover:bg-[#B8962F]" asChild>
             <a href="/#contact">{t("navbar.getInTouch")}</a>
           </Button>
         </nav>
@@ -109,7 +109,7 @@ const Navbar = () => {
               {t("navbar.contact")}
             </a>
             <div className="pt-2">
-              <Button className="w-full bg-amber-600 hover:bg-amber-700" asChild>
+              <Button className="w-full bg-[#D4AF37] hover:bg-[#B8962F]" asChild>
                 <a href="/#contact" onClick={handleNavLinkClick}>{t("navbar.getInTouch")}</a>
               </Button>
             </div>

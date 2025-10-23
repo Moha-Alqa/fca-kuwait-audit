@@ -74,19 +74,19 @@ const ServicesSection = () => {
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-blue-900 sm:text-4xl mb-4">{t("services.title")}</h2>
-          <div className="w-20 h-1 mx-auto bg-amber-600 mb-8"></div>
-          <p className="max-w-3xl mx-auto text-lg text-gray-600">
+          <h2 className="text-3xl font-bold text-[#0A5F6E] sm:text-4xl mb-4">{t("services.title")}</h2>
+          <div className="w-20 h-1 mx-auto bg-[#D4AF37] mb-8"></div>
+          <p className="max-w-3xl mx-auto text-lg text-[#64748B]">
             {t("services.description")}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="border-t-4 border-t-blue-900 hover:shadow-lg transition-shadow">
+            <Card key={index} className="border-t-4 border-t-[#0A5F6E] hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-blue-900">{service.title}</CardTitle>
-                <CardDescription className="text-gray-600">
+                <CardTitle className="text-xl font-semibold text-[#0A5F6E]">{service.title}</CardTitle>
+                <CardDescription className="text-[#64748B]">
                   {service.description}
                 </CardDescription>
               </CardHeader>
@@ -94,8 +94,8 @@ const ServicesSection = () => {
                 <ul className="space-y-2">
                   {service.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-amber-600 mr-2 shrink-0 mt-0.5 rtl:ml-2 rtl:mr-0" />
-                      <span className="text-sm text-gray-700">{item}</span>
+                      <Check className="h-5 w-5 text-[#10B981] mr-2 shrink-0 mt-0.5 rtl:ml-2 rtl:mr-0" />
+                      <span className="text-sm text-[#475569]">{item}</span>
                     </li>
                   ))}
                 </ul>
