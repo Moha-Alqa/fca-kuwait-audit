@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
           <Link to="/" className="text-sm font-medium text-[#475569] hover:text-[#0A5F6E]">
             {t("navbar.home")}
           </Link>

@@ -36,9 +36,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t("footer.contactInfo")}</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><span className="ltr-numbers">{t("contact.phone1")}</span></li>
-              <li><span className="ltr-numbers">{t("contact.phone2")}</span></li>
-              <li className="ltr-text">contact@fcauditing.com</li>
+              <li><span className="ltr-numbers block">{t("contact.phone1")}</span></li>
+              <li><span className="ltr-numbers block">{t("contact.phone2")}</span></li>
+              <li className="ltr-text rtl:text-right">contact@fcauditing.com</li>
               <li>{t("contact.addressLine1")}</li>
               <li>{t("contact.addressLine2")}</li>
               <li>{t("contact.addressLine3")}</li>
