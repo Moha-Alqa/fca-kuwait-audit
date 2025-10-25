@@ -52,8 +52,8 @@ const Footer = () => {
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-4 rtl:space-x-reverse">
-              <li><a href="#" className="text-gray-400 hover:text-white">{t("footer.privacy")}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">{t("footer.terms")}</a></li>
+              <li><a href="/privacy-policy" className="text-gray-400 hover:text-white text-sm">{t("footer.privacy")}</a></li>
+              <li><a href="/terms-of-service" className="text-gray-400 hover:text-white text-sm">{t("footer.terms")}</a></li>
             </ul>
           </div>
         </div>
