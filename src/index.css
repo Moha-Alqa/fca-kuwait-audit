@@ -113,7 +113,7 @@
   
   .rtl .ltr-numbers {
     direction: ltr;
-    display: inline-block;
+    display: block;
   }
   
   /* Flip icons in RTL mode */
