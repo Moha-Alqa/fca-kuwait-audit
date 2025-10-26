@@ -30,8 +30,10 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-[#0A5F6E] mb-1">{t("contact.phone")}</h3>
-                  <p className="text-[#475569] text-sm ltr-numbers">{t("contact.phone1")}</p>
-                  <p className="text-[#475569] text-sm ltr-numbers">{t("contact.phone2")}</p>
+                  <div className="ltr-numbers">
+                    <p className="text-[#475569] text-sm">{t("contact.phone1")}</p>
+                    <p className="text-[#475569] text-sm">{t("contact.phone2")}</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
