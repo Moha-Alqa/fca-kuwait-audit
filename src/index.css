@@ -114,6 +114,7 @@
   .rtl .ltr-numbers {
     direction: ltr;
     display: block;
+    text-align: left;
   }
   
   /* Flip icons in RTL mode */
